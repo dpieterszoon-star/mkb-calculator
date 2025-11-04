@@ -115,6 +115,7 @@
             text-align: center;
             margin-top: 0.75rem; 
             font-style: italic;
+            line-height: 1.4;
         }
 
         #roi-calculator-container .gemini-powered {
@@ -340,11 +341,11 @@
                 <button type="button" id="calculateBtn" class="base-button calculate-button">Bereken ROI</button>
                 
                 <div class="disclaimer-text">
-                    De calculator kan onjuistheden delen over uw bedrijf.
+                    De resultaten van deze calculator zijn schattingen en geen garantie. Laat je doorlichten door een expert.
                 </div>
                 
                 <div class="gemini-powered">
-                    <a href="https://support.google.com/gemini/answer/13594961?visit_id=638976948957916701-245597639&p=privacy_notice&rd=1#privacy_notice" target="_blank" rel="noopener noreferrer">Gestuurd door Gemini.</a>
+                    Powered by <a href="https://support.google.com/gemini/answer/13594961?visit_id=638976948957916701-245597639&p=privacy_notice&rd=1#privacy_notice" target="_blank" rel="noopener noreferrer">Gemini.</a>
                 </div>
             </form>
         </div>
@@ -579,7 +580,7 @@
         if (interpretROIBtn) {
             interpretROIBtn.addEventListener('click', async () => {
                 const roiText = resROISpan.textContent;
-                const seoInvestering = parseFloat(seoInveSteringInput.value);
+                const seoInvestering = parseFloat(seoInvesteringInput.value);
                 const basisZoekwoord = basisZoekwoordInput.value.trim() || "hun bedrijf"; 
 
                 if (roiText === "N/A" || isNaN(seoInvestering)) {
@@ -618,3 +619,5 @@
     </script>
 </body>
 </html>
+
+
